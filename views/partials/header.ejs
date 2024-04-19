@@ -12,9 +12,13 @@
   <nav>
     <a href="/">Home</a>
     |
+    <% if (user) { %>
     <a href="/posts/new">Add New Post</a>
     |
     <a href="/posts">All Posts</a>
     |
     <a href="/resources">Resources</a>
+    <% } else { %>
+        <a href="/auth/google" class="login">LOG IN
+    <% } %>
   </nav>
