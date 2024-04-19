@@ -1,18 +1,31 @@
+:root {
+  --main-bg-color: #FFEFD5;
+}
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: #6F4E37;
+}
+h1 {
+  color: #6F4E37;
+}
+a:hover {
+  color: #A0785A;
 }
 .login {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 34px;
+  height: 24px;
 }
 
 .login img {
-  height: 30px;
+  height: 15px;
+}
+.loggedin-user img {
+  height: 20px;
+  border-radius: 20px;
 }
