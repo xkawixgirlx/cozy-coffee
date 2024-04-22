@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const {ObjectId} = require('mongodb');
 
 
 
@@ -19,7 +20,8 @@ const postSchema = new Schema({
     postId: {
         type: Number,
         min: 0,
-        required: true
+        required: true,
+        ref: 'ObjectId'
     },
     image: {
         type: String,
@@ -29,3 +31,7 @@ const postSchema = new Schema({
 }, {
     timestamps: true
 });
+
+
+
+module.exports = mongoose.model('Post', postSchema);
