@@ -3,14 +3,14 @@
 
 <section class="posts-index" style="color:#3D2B1F" >
 <h2>Latest Coffee Posts!</h2>
+</section>
 
-
-
+<a href="/posts/new">Add New Post!</a>
 <table id="post-list">
     <thead>
       <tr>
-        <th>Title</th>
         <th>Image</th>
+        <th>Title</th>
         <th>Content</th>
         <th><br></th>
       </tr>
@@ -18,14 +18,14 @@
     <tbody>
       <% posts.forEach(function(p) { %>
         <tr>
-          <td><%= p.title %></td>
           <td><%= p.image %></td>
+          <td><%= p.title %></td>
           <td><%= p.content %></td>
+          <td><%= p.createdAt.toLocaleDateString() %></td>
           <td><a href="/posts/<%= p._id %>">Post Details</a></td>
         </tr>
         <% }); %>
       </tbody>
-    </table>
-  </section>
+    </table> 
 
 <%- include('../partials/footer') %>

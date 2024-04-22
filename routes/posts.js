@@ -16,7 +16,8 @@ router.get('/new', ensureLoggedIn, postsCtrl.new);
 router.get('/:id', postsCtrl.show);
 // POST /posts create post page (create functionality)
 router.post('/index',ensureLoggedIn, postsCtrl.create);
-
+// DELETE /posts/:id  delete a post you created (delete functionality)
+router.delete('/:id', ensureLoggedIn, postsCtrl.delete);
 
 
 

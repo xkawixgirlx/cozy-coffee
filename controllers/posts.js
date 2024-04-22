@@ -6,6 +6,14 @@ module.exports = {
     create,
     new: newPost,
     show,
+    delete: deletePost,
+};
+
+
+
+async function deletePost(req, res) {
+    const post = await Post.findOneAndDelete({ 'post._id': req.params.id, 'post.user': req.user.id });
+    res.redirect(`/posts/index`, post);
 };
 
 

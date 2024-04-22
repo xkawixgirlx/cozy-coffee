@@ -1,20 +1,16 @@
 <%- include('../partials/header') %>
 
 
-<h2>Viewing <%= posts._id %></h2>
-
+<h2>Viewing <%= posts.title %></h2>
+<img src="<%= posts.image %>" alt="coffee">
 <div><%= posts.content %></div>
-
 <section id="comments">
-<p>Comments!</p>
+<p>Comments Placeholder!</p>
 </section>
 
 
-
-
-
-
-
-
+<form action="/posts/<%= posts._id %>?_method=DELETE" method="POST">
+<button type="submit">X</button>
+</form>
 
 <%- include('../partials/footer') %>
