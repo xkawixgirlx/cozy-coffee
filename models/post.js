@@ -23,9 +23,8 @@ const postSchema = new Schema({
     },
     postId: {
         type: Number,
-        min: 0,
-        required: true,
-        ref: 'ObjectId'
+        min: 0,    
+        
     },
     coffeeType: {
         type: String,

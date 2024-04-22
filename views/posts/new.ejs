@@ -1,10 +1,10 @@
 <%- include('../partials/header') %>
 
-<form id="new-post-form" action="/posts" method="post">
+<form id="new-post-form" action="/posts/index" method="post">
     <label>Title:</label>
     <input type="text" name="title">
     <label>Image:</label>
-    <input type="image" name="image">
+    <input type="button" name="image">
     <button type="submit">Add Image</button>
     <label>Coffee or Tea</label>
     <select name="coffeeType">
@@ -17,7 +17,7 @@
     </select>
     <label>Content:</label>
     <input type="text" name="content">
-    <input type="submit" value="New Post">
+    <input type="submit" value="Submit New Post">
 </form>
 
 
