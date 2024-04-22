@@ -13,20 +13,16 @@ const postSchema = new Schema({
         type: String,
         required: true
     },
-    user: [{
+    user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
-        required: true
-    }],
+    },
     Date: {
         type: Date,
     },
     coffeeType: {
         type: String,
         enum: ['Light Roast', 'Medium Roast', 'Dark Roast', 'Matcha', 'Chai', 'Tea']
-    },
-    postID: {
-        type: Number,
     },
     image: {
         type: String,

@@ -12,14 +12,16 @@ module.exports = {
 
 
 async function deletePost(req, res) {
-    const post = await Post.findOneAndDelete({ '_id': req.params.id, 'post.user': req.user.id });
-    res.redirect(`/posts/index`, post);
+    console.log(req.params.id);
+    await Post.findOneAndDelete({ _id: req.params.id, user: req.user._id });
+    res.redirect('/posts');
 };
 
 
 
 async function show(req, res) {
     const post = await Post.findById(req.params.id);
+    console.log(post);
     res.render('posts/show', { title: 'Posts Detail Page', post });
 };
 
@@ -32,9 +34,10 @@ async function newPost(req, res) {
 
 
 async function create(req, res) {
+    req.body.user = req.user._id;
+    req.body.userName = req.user.name;
+    req.body.userAvatar = req.user.avatar;
     const post = new Post(req.body);
-    post.content = req.body.content;
-    post.userName = req.user._id;
     try {
         await post.save();
         res.redirect(`/posts/${post._id}`);

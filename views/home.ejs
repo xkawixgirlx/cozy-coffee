@@ -23,11 +23,11 @@
 
     <% if (user) { %>
       |
-      <a href="/posts/index">Posts</a>
+      <a href="/posts">Posts</a>
       |
       <a href="/resources">Resources</a>
       |
-      <td class="loggedin-user"><img alt="avatar" src="<%= user.avatar %>" referrerpolicy="no-referrer">
+      <td id="loggedin-user"><img alt="avatar" src="<%= user.avatar %>" referrerpolicy="no-referrer">
         <%= user.name %>
       </td>
       |
