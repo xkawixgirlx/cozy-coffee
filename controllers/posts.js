@@ -12,15 +12,15 @@ module.exports = {
 
 
 async function deletePost(req, res) {
-    const post = await Post.findOneAndDelete({ 'post._id': req.params.id, 'post.user': req.user.id });
+    const post = await Post.findOneAndDelete({ '_id': req.params.id, 'post.user': req.user.id });
     res.redirect(`/posts/index`, post);
 };
 
 
 
 async function show(req, res) {
-    const posts = await Post.findById(req.params.id);
-    res.render('posts/show', { title: 'Posts Detail Page', posts });
+    const post = await Post.findById(req.params.id);
+    res.render('posts/show', { title: 'Posts Detail Page', post });
 };
 
 
