@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const postsCtrl = require('../controllers/posts');
+const ensureLoggedIn = require('../config/ensureLoggedIn');
 
 /* GET users listing. */
 
@@ -9,6 +10,11 @@ const postsCtrl = require('../controllers/posts');
 
 // GET /posts homepage (posts home functionality)
 router.get('/index', postsCtrl.index);
+// GET /posts/:id show post details page (show functionality)
+router.get('/:id', postsCtrl.show);
+// POST /posts create post page (create functionality)
+router.post('/index',ensureLoggedIn, postsCtrl.create);
+
 
 
 

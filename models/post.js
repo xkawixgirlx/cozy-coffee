@@ -1,11 +1,15 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const {ObjectId} = require('mongodb');
+const { ObjectId } = require('mongodb');
 
 
 
 const postSchema = new Schema({
     content: {
+        type: String,
+        required: true
+    },
+    title: {
         type: String,
         required: true
     },

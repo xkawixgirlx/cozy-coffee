@@ -1,15 +1,17 @@
 :root {
   --main-bg-color: #FFEFD5;
+  --main-color: #3D2B1F;
 }
 
 body {
-  padding: 25px;
-  width: 100%;
-  display: space-between;
-  grid-template-rows: 1fr;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 50px 1fr;
   align-items: center;
   justify-content: center;
   font-family: "Figtree", sans-serif;
+  grid-template-areas: 
+  "nav"
 }
 
 a {
@@ -52,4 +54,16 @@ h1 {
   color: #3D2B1F;
   border-radius: 55px;
 }
+table {
+  font-size: 20px;
+}
 
+table thead th {
+  padding: 5px;
+  border-bottom: 2px solid #424748;
+}
+
+table td {
+  padding: 10px;
+  text-align: center;
+}
