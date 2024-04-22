@@ -1,0 +1,24 @@
+<%- include('../partials/header') %>
+
+<form id="new-post-form" action="/posts" method="post">
+    <label>Title:</label>
+    <input type="text" name="title">
+    <label>Image:</label>
+    <input type="image" name="image">
+    <button type="submit">Add Image</button>
+    <label>Coffee or Tea</label>
+    <select name="coffeeType">
+        <option value="Light Roast">Light Roast</option>
+        <option value="Medium Roast">Medium Roast</option>
+        <option value="Dark Roast">Dark Roast</option>
+        <option value="Matcha">Matcha</option>
+        <option value="Chai">Chai</option>
+        <option value="Tea">Tea</option>
+    </select>
+    <label>Content:</label>
+    <input type="text" name="content">
+    <input type="submit" value="New Post">
+</form>
+
+
+<%- include('../partials/footer') %>

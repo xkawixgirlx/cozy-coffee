@@ -27,6 +27,10 @@ const postSchema = new Schema({
         required: true,
         ref: 'ObjectId'
     },
+    coffeeType: {
+        type: String,
+        enum: ['Light Roast', 'Medium Roast', 'Dark Roast', 'Matcha', 'Chai', 'Tea']
+    },
     image: {
         type: String,
     },
