@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+
+<h2>Latest Coffee Posts!</h2>
+
+<table id="list">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Image</th>
+        <th>Content</th>
+        <th><br></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% posts.forEach(function(p) { %>
+        <tr>
+          <td><%= p.title %></td>
+          <td><%= p.image %></td>
+          <td><%= p.content %></td>
+          <td><a href="/posts/<%= p._id %>">Post Details</a></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
+
+<%- include('../partials/footer') %>
