@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+
+    <div id="edit-form">
+        <h2>Edit your post</h2>
+    </div>
+
+    <form action="/posts/<%= post._id %>?_method=PUT" method="POST">
+        <label>Title:</label>
+        <input type="text" name="title" value="<%= post.title %>">
+        <label>Coffee or Tea</label>
+        <select name="coffeeType" value="<%= post.coffeeType %>">
+            <option value="Light Roast" <%=post.coffeeType=='Light Roast' ? 'selected' : '' %>>Light Roast</option>
+            <option value="Medium Roast" <%=post.coffeeType=='Medium Roast' ? 'selected' : '' %>>Medium Roast</option>
+            <option value="Dark Roast" <%=post.coffeeType=='Dark Roast' ? 'selected' : '' %>>Dark Roast</option>
+            <option value="Matcha" <%=post.coffeeType=='Matcha' ? 'selected' : '' %>>Matcha</option>
+            <option value="Chai" <%=post.coffeeType=='Chai' ? 'selected' : '' %>>Chai</option>
+            <option value="Tea" <%=post.coffeeType=='Tea' ? 'selected' : '' %>>Tea</option>
+        </select>
+        <label>Content:</label>
+        <textarea name="content" value=" <%= post.content %> col="10" rows="10" style="height: 400px; width: 800px;""><%= post.content %></textarea>
+        <button type="submit">Edit Post</button>
+    </form>
+
+
+
+
+    <%- include('../partials/footer') %>

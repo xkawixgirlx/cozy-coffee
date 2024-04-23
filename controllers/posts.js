@@ -7,8 +7,16 @@ module.exports = {
     new: newPost,
     show,
     delete: deletePost,
+    edit,
 };
 
+
+
+async function edit(req, res) {
+    const post = await Post.findOne({_id: req.params.id, user: req.user._id});
+    if (!post) return res.redirect('/posts');
+    res.render('posts/edit', { post });
+};
 
 
 async function deletePost(req, res) {

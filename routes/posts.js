@@ -14,6 +14,8 @@ router.get('/', postsCtrl.index);
 router.get('/new', ensureLoggedIn, postsCtrl.new);
 // GET /posts/:id show post details page (show functionality)
 router.get('/:id', postsCtrl.show);
+// GET /posts/:id/edit This is the route for (editing functionality)
+router.get('/:id/edit', ensureLoggedIn, postsCtrl.edit);
 // POST /posts create post page (create functionality)
 router.post('/',ensureLoggedIn, postsCtrl.create);
 // DELETE /posts/:id  delete a post you created (delete functionality)

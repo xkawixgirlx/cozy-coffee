@@ -7,9 +7,16 @@
 <p>Comments Placeholder!</p>
 </section>
 
+<div id="delete-action">
+    <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+    <button type="submit">X</button>
+    </form>
+</div>
+<div id="edit-link">
+    <a href="/posts/<%= post._id %>/edit">Edit My Post</a>
+</div>
 
-<form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
-<button type="submit">X</button>
-</form>
+
+
 
 <%- include('../partials/footer') %>
