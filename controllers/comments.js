@@ -13,9 +13,9 @@ module.exports = {
 async function update(req, res) {
     const post = await Post.findOne({ 'comments._id': req.params.id });
     const comment = post.comments.id(req.params.id);
-    if (!comment.user._id.equals(req.user.id))
+    if (!comment.user.equals(req.user._id)) return res.redirect(`/posts/${post._id}`);
     comment.comment = req.body.comment;
-    comment.userName = req.body.userName;
+    console.log(comment.comment);
     try {
         await post.save();
     } catch (err) {

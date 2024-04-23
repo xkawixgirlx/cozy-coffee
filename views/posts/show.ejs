@@ -20,12 +20,13 @@
         <p><%= c.comment %></p> 
         <p><%= c.createdAt.toLocaleDateString() %></p> 
      
-
+<% if (user?._id.equals(c.user)) { %>
         <div id="edit-comment">
             <a href="/comments/<%= c._id %>/edit">Edit Comment</a>
         </div>
-        <% }) %>
-        
+            <% } %>
+        <% }); %>
+
         <div id="new-comment">
             <form action="/posts/<%= post._id %>/comments" method="POST">
                 <label>Comment:</label>
