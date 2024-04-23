@@ -19,14 +19,20 @@
         <p><%= c.userName %></p>
         <p><%= c.comment %></p> 
         <p><%= c.createdAt.toLocaleDateString() %></p> 
-     <% }) %>
-</section>
-<section id="new-comment">
-    <form action="/posts/<%= post._id %>/comments" method="POST">
-        <label>Comment:</label>
-        <textarea name="comment" id="newcomment-text" col="10" rows="10" style="height: 400px; width: 800px;">leave a comment</textarea>
-        <input type="submit" value="Leave a Comment">
-    </form>
+     
+
+        <div id="edit-comment">
+            <a href="/comments/<%= c._id %>/edit">Edit Comment</a>
+        </div>
+        <% }) %>
+        
+        <div id="new-comment">
+            <form action="/posts/<%= post._id %>/comments" method="POST">
+                <label>Comment:</label>
+                <textarea name="comment" id="newcomment-text" col="10" rows="10" style="height: 400px; width: 800px;">leave a comment</textarea>
+                <input type="submit" value="Leave a Comment">
+            </form>
+        </div>
 </section>
 
 

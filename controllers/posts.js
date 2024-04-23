@@ -41,7 +41,6 @@ async function deletePost(req, res) {
 
 async function show(req, res) {
     const post = await Post.findById(req.params.id);
-    console.log(post);
     res.render('posts/show', { title: 'Posts Detail Page', post });
 };
 

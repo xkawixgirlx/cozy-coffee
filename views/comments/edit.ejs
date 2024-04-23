@@ -1,0 +1,11 @@
+<%- include('../partials/header') %>
+
+<div id="edit-comment-form">
+    <form action="/comments/<%= comments._id %>?_method=PUT" method="POST">
+        <label>Comment:</label>
+        <textarea name="comment" id="editcomment-text" value="<%= comments.comment %>" col="10" rows="10" style="height: 400px; width: 800px;"><%= comments.comment %></textarea>
+        <input type="submit" value="Edit Comment">
+    </form>
+</div>
+
+<%- include('../partials/footer') %> 
