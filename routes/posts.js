@@ -18,6 +18,8 @@ router.get('/:id', postsCtrl.show);
 router.get('/:id/edit', ensureLoggedIn, postsCtrl.edit);
 // POST /posts create post page (create functionality)
 router.post('/',ensureLoggedIn, postsCtrl.create);
+// PUT /:id this is for the Update functionality (Update Action)
+router.put('/:id', ensureLoggedIn, postsCtrl.update);
 // DELETE /posts/:id  delete a post you created (delete functionality)
 router.delete('/:id', ensureLoggedIn, postsCtrl.delete);
 

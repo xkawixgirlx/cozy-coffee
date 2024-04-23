@@ -8,6 +8,18 @@ module.exports = {
     show,
     delete: deletePost,
     edit,
+    update,
+};
+
+
+async function update(req, res) {
+    try {
+        const updatedPost = await Post.findOneAndUpdate({_id: req.params.id, user: req.user._id}, req.body, {new: true});
+        return res.redirect(`/posts/${updatedPost._id}`);
+    } catch (err) {
+        console.log(err.message);
+        return res.redirect('/posts');
+    }
 };
 
 
