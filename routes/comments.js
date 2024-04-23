@@ -14,7 +14,8 @@ router.get('/comments/:id/edit', ensureLoggedIn, commentsCtrl.editComment);
 router.post('/posts/:id/comments', ensureLoggedIn, commentsCtrl.create);
 // PUT /comments/:id (update comment action)
 router.put('/comments/:id', ensureLoggedIn, commentsCtrl.update);
-
+// DELETE /comments/:id delete comment route (delete function)
+router.delete('/comments/:id', ensureLoggedIn, commentsCtrl.delete);
 
 
 module.exports = router;

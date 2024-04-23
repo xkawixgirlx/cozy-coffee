@@ -7,7 +7,7 @@
 <div><%= post.content %></div>
 <div id="delete-action">
     <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
-    <button type="submit">X</button>
+    <button type="submit">Delete Post</button>
     </form>
 </div>
 <div id="edit-link">
@@ -23,6 +23,11 @@
 <% if (user?._id.equals(c.user)) { %>
         <div id="edit-comment">
             <a href="/comments/<%= c._id %>/edit">Edit Comment</a>
+        </div>
+        <div id="delete-comment">
+            <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
+                <button type="submit">Delete Comment</button>
+              </form>
         </div>
             <% } %>
         <% }); %>

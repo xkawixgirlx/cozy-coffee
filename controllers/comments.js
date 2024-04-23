@@ -6,6 +6,7 @@ module.exports = {
     create,
     editComment,
     update,
+    delete: deleteComment,
 };
 
 
@@ -30,6 +31,16 @@ async function editComment(req, res) {
     const post = await Post.findOne({ 'comments._id': req.params.id });
     const comment = post.comments.id(req.params.id);
     res.render(`comments/edit`, { title: 'Edit Comment', post, comment });
+};
+
+
+
+async function deleteComment(req, res) {
+    const post = await Post.findOne({ 'comments._id': req.params.id, 'comments.user': req.user._id });
+    if (!post) return res.redirect(`/posts/${post._id}`);
+    post.comments.remove(req.params.id);
+    await post.save();
+    res.redirect(`/posts/${post._id}`);
 };
 
 
