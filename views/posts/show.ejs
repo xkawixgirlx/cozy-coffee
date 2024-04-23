@@ -1,10 +1,14 @@
 <%- include('../partials/header') %>
 
 
-<h2>Viewing <%= post.title %></h2>
+<h2>Viewing <%= post.userName %>'s Post</h2>
+<div id="post-title"><%= post.title %></div>
 <div><%= post.content %></div>
+
 <section id="comments">
-<p>Comments Placeholder!</p>
+    <% post.comments.forEach(function(c)  { %>
+        <p><%= c.content %></p>        
+     <% }) %>
 </section>
 
 <div id="delete-action">
