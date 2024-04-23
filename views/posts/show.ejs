@@ -15,6 +15,14 @@
 <div id="edit-link">
     <a href="/posts/<%= post._id %>/edit">Edit My Post</a>
 </div>
+<br>
+<section id="new-comment">
+    <form action="/posts/<%= post._id %>/comments">
+    <label>Comment:</label>
+    <textarea name="comment" id="" cols="30" rows="10">leave a comment</textarea>
+    <input type="submit" value="Leave a Comment">
+    </form>
+</section>
 
 
 
