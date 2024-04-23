@@ -9,7 +9,6 @@ module.exports = {
 
 
 async function create(req, res) {
-    console.log(req.body);
     const post = await Post.findById({ _id: req.params.id });
     req.body.user = req.user._id;
     req.body.userName = req.user.name;
@@ -17,6 +16,7 @@ async function create(req, res) {
     post.comments.push(req.body);
     try {
         await post.save();
+        return ('Your Comment Posted Successfully!');
     } catch (err) {
         console.log(err.message);
     }
