@@ -2,15 +2,9 @@
 
 
 <h2>Viewing <%= post.userName %>'s Post</h2>
+<br>
 <div id="post-title"><%= post.title %></div>
 <div><%= post.content %></div>
-
-<section id="comments">
-    <% post.comments.forEach(function(c)  { %>
-        <p><%= c.content %></p>        
-     <% }) %>
-</section>
-
 <div id="delete-action">
     <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
     <button type="submit">X</button>
@@ -20,6 +14,14 @@
     <a href="/posts/<%= post._id %>/edit">Edit My Post</a>
 </div>
 <br>
+<section id="comments">
+    <% post.comments.forEach(function(c)  { %>
+        <p><%= c.userName %></p>
+        <p><%= c.userAvatar %></p>      
+        <p><%= c.content %></p> 
+        <p><%= c.date %></p> 
+     <% }) %>
+</section>
 <section id="new-comment">
     <form action="/posts/<%= post._id %>/comments" method="POST">
         <label>Comment:</label>
