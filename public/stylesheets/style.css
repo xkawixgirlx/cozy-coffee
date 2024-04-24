@@ -4,7 +4,8 @@
 }
 
 body {
-  width: 100%;
+  width: 100vw;
+  height: 100%;
   display: grid;
   grid-template-rows: 1fr 1fr;
   align-items: center;
@@ -91,6 +92,16 @@ h1 {
 #title {
   font-weight: bold;
   font-size: 1.2rem;
+  padding: 5px 0 5px;
+}
+
+#content {
+  width: 100%;
+  height: 75px;
+  background-color: #EAE0C8;
+  border: 2.5px dotted #926644;
+  border-radius: 25px;
+  flex-wrap: wrap;
 }
 
 #latest img {
@@ -98,10 +109,7 @@ h1 {
 }
 
 #postimage {
-  width: 200px;
   height: 200px;
-  background-color: #EAE0C8;
-  border: 2.5px dotted #926644;
-  display: grid;
+  width: 200px;
 }
 
