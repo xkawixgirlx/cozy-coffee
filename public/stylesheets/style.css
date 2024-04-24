@@ -6,7 +6,7 @@
 body {
   width: 100vw;
   display: grid;
-  grid-template-rows: 50px 1fr;
+  grid-template-rows: 1fr 1fr;
   align-items: center;
   justify-content: center;
   font-family: "Figtree", sans-serif;
@@ -32,40 +32,39 @@ h1 {
 
 }
 
-.div#nav {
+.div #nav {
   width: 100%;
-  height: 100%;
-  display: grid;
+  height: 1rem;
   background-color: #EAE0C8;
   font-family: "Figtree", sans-serif;
+  align-items: end;
 }
 
 .login {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 24px;
+  height: 35px;
 }
 
 .login img {
   height: 25px;
 }
 
-#header-user img {
+#logout, #user {
+  display: flex;
+  justify-content: right;
+  align-items: center;
   color: #3D2B1F;
-  border-radius: 55px;
-  height: 35px;
 }
 
-#logout {
-  text-align: right;
+#user img {
+  color: #3D2B1F;
+  font-family: "Figtree", sans-serif;
+  height: 45px;
+  border-radius: 55px;
 }
 
-#loggedin-user img {
-  color: #3D2B1F;
-  border-radius: 55px;
-  height: 35px;
-}
 
 table {
   font-size: 20px;

@@ -3,8 +3,9 @@
 
 <h2>Viewing <%= post.userName %>'s Post</h2>
 <br>
+<% if (user?._id.equals(post.user)) { %>
 <div id="post-title"><%= post.title %></div>
-<div><%= post.content %></div>
+<div id="post-body"><%= post.content %></div>
 <div id="delete-action">
     <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
     <button type="submit">Delete Post</button>
@@ -13,9 +14,10 @@
 <div id="edit-link">
     <a href="/posts/<%= post._id %>/edit">Edit My Post</a>
 </div>
+<% } %>
 <br>
 <section id="comments">
-    <% post.comments.forEach(function(c)  { %>
+    <% post.comments.slice().reverse().forEach(function(c)  { %>
         <p><%= c.userName %></p>
         <p><%= c.comment %></p> 
         <p><%= c.createdAt.toLocaleDateString() %></p> 

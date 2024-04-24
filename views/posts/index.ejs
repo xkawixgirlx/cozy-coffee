@@ -17,7 +17,7 @@
       </tr>
     </thead>
     <tbody>
-      <% posts.forEach(function(p) { %>
+      <% posts.slice().reverse().forEach(function(p) { %>
         <tr>
           <td><%= p.image %></td>
           <td><%= p.title %></td>
