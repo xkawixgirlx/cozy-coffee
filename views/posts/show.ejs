@@ -28,7 +28,7 @@
         </div>
         <div id="delete-comment">
             <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
-                <button type="submit">Delete Comment</button>
+                <button type="submit" id="deletecomment-btn">Delete Comment</button>
               </form>
         </div>
             <% } %>

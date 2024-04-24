@@ -19,14 +19,18 @@ router.get('/auth/google', passport.authenticate(
 ));
 
 
-router.get('/oauth2callback', passport.authenticate(
-  'google',
-  {
-    successRedirect: '/',
-    //Change to what is best for your app
-    failureRedirect: '/'
-  }
-));
+router.get('/oauth2callback', function (req, res, next) {
+  const redirectTo = req.session.redirectTo;
+  delete req.session.redirectTo;
+  passport.authenticate(
+    'google',
+    {
+      // Replace '/movies' with your project's default redirect
+      successRedirect: redirectTo || '/',
+      failureRedirect: '/'
+    }
+  )(req, res, next);  // Call the middleware returned by passport
+});
 
 router.get('/logout', function(req, res) {
   req.logOut(function() {

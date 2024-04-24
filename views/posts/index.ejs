@@ -19,7 +19,7 @@
         <%= p.content %>
       </div>
       <div id="date">
-        <%= p.createdAt.toLocaleDateString() %>
+        <%= p.createdAt.toLocaleTimeString() %>
       </div>
       <div id="post-details"><a href="/posts/<%= p._id %>">View Post</a></div>
       <% }); %>
