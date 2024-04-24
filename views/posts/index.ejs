@@ -1,32 +1,29 @@
 <%- include('../partials/header') %>
 
 
-<section class="posts-index" style="color:#3D2B1F" >
-<h2>Latest Coffee Posts!</h2>
-</section>
+  <section class="posts-index" style="color:#3D2B1F">
+    <h2 id="latest">Latest Coffee Posts!</h2>
+  </section>
 
-<a href="/posts/new">Add New Post!</a>
-<table id="post-list">
-    <thead>
-      <tr>
-        <th>Image</th>
-        <th>Title</th>
-        <th>Content</th>
-        <th>Date</th>
-        <th><br></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% posts.slice().reverse().forEach(function(p) { %>
-        <tr>
-          <td><%= p.image %></td>
-          <td><%= p.title %></td>
-          <td><%= p.content %></td>
-          <td><%= p.createdAt.toLocaleDateString() %></td>
-          <td><a href="/posts/<%= p._id %>">Post Details</a></td>
-        </tr>
-        <% }); %>
-      </tbody>
-    </table> 
+  <a href="/posts/new"><button type="button" id="addnew">Add New Post</button></a>
+  <section class="posts">
 
-<%- include('../partials/footer') %>
+    <br>
+    <% posts.slice().reverse().forEach(function(p) { %>
+      <div id="postimage">
+        <%= p.image %>
+      </div>
+      <div id="title">
+        <%= p.title %>
+      </div>
+      <div id="content">
+        <%= p.content %>
+      </div>
+      <div id="date">
+        <%= p.createdAt.toLocaleDateString() %>
+      </div>
+      <div id="post-details"><a href="/posts/<%= p._id %>">Post Details</a></div>
+      <% }); %>
+  </section>
+
+  <%- include('../partials/footer') %>

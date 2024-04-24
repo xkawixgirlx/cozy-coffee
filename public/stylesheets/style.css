@@ -4,18 +4,17 @@
 }
 
 body {
-  width: 100vw;
+  width: 100%;
   display: grid;
   grid-template-rows: 1fr 1fr;
   align-items: center;
   justify-content: center;
   font-family: "Figtree", sans-serif;
-  grid-template-areas:
-    "nav"
 }
 
 a {
   color: #3D2B1F;
+  font-size: 1.25rem;
 }
 
 a:hover {
@@ -27,17 +26,17 @@ h1 {
   display: grid;
   justify-content: center;
   align-items: center;
-  padding: 10px 0 10px 0;
+  padding: 15px 0 15px 0;
   font-family: "Figtree", sans-serif;
 
 }
 
-.div #nav {
+#nav {
   width: 100%;
-  height: 1rem;
+  height: 4.5rem;
   background-color: #EAE0C8;
+  border: 4.5px dotted #926644;
   font-family: "Figtree", sans-serif;
-  align-items: end;
 }
 
 .login {
@@ -65,17 +64,12 @@ h1 {
   border-radius: 55px;
 }
 
-
-table {
-  font-size: 20px;
+#latest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-table thead th {
-  padding: 5px;
-  border-bottom: 2px solid #43351e;
-}
-
-table td {
-  padding: 10px;
-  text-align: center;
+#addnew {
+  font-size: 1rem;
 }
