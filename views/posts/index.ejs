@@ -2,7 +2,7 @@
 
 
   <section class="posts-index" style="color:#3D2B1F">
-    <h2 id="latest">Latest Coffee Posts!</h2>
+    <h2 id="latest">Latest Coffee Posts!<img src="https://cdn.pixabay.com/photo/2022/09/08/17/15/cafe-7441426_1280.png" alt="coffee_mug"></h2>
   </section>
 
   <a href="/posts/new"><button type="button" id="addnew">Add New Post</button></a>
@@ -22,7 +22,7 @@
       <div id="date">
         <%= p.createdAt.toLocaleDateString() %>
       </div>
-      <div id="post-details"><a href="/posts/<%= p._id %>">Post Details</a></div>
+      <div id="post-details"><a href="/posts/<%= p._id %>">View Post</a></div>
       <% }); %>
   </section>
 

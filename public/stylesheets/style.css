@@ -73,3 +73,25 @@ h1 {
 #addnew {
   font-size: 1rem;
 }
+
+#title,#content {
+  display: grid;
+  justify-content: center;
+}
+#date, #post-details {
+  display: grid;
+  justify-content: right;
+}
+#title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+#latest img {
+  height: 65px;
+}
+#postimage {
+  width: 200px;
+  height: 200px;
+  background-color: #EAE0C8;
+  border: 2.5px dotted #926644;
+}
