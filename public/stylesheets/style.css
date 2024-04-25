@@ -5,13 +5,16 @@
 }
 
 body {
-  width: 100%;
+  width: 95%;
+  min-width: 400px;
   height: 100%;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
   align-items: center;
   justify-content: center;
   font-family: "Figtree", sans-serif;
+  padding: 0 25px;
+  margin: 8px; 
 }
 
 a {
@@ -34,14 +37,19 @@ h1, h2 {
 }
 
 
-#nav {
+nav {
   width: 100%;
+  /* min-width: 400px; */
   height: 4.5rem;
   background-color: #EAE0C8;
   border: 4.5px dotted #926644;
   border-radius: 15px;
   font-family: "Figtree", sans-serif;
-  display: grid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
 }
 
 nav {
@@ -150,4 +158,9 @@ nav {
 section {
   margin: 0 25px 0 25px; 
   padding: 0 8px;
+}
+
+footer {
+  justify-content: center;
+  align-items: center;
 }

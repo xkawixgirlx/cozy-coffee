@@ -25,7 +25,6 @@ router.get('/oauth2callback', function (req, res, next) {
   passport.authenticate(
     'google',
     {
-      // Replace '/movies' with your project's default redirect
       successRedirect: redirectTo || '/',
       failureRedirect: '/'
     }
@@ -34,7 +33,6 @@ router.get('/oauth2callback', function (req, res, next) {
 
 router.get('/logout', function(req, res) {
   req.logOut(function() {
-    //With own app - possibly root path
     res.redirect('/');
   });
 });
