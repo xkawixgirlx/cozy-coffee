@@ -33,8 +33,11 @@
     <% post.comments.slice().reverse().forEach(function(c)  { %>
         <p><%= c.userName %></p>
         <p><%= c.comment %></p> 
-        <p><%= c.createdAt.toLocaleTimeString() %></p> 
-        <p><%= c.createdAt.toLocaleDateString() %></p> 
+        <div id="comment-date">
+        <%= c.createdAt.toLocaleTimeString() %>
+        &ncup; 
+        <%= c.createdAt.toLocaleDateString() %> 
+        </div>
         
 <% if (user?._id.equals(c.user)) { %>
         <div id="edit-comment">
@@ -50,7 +53,7 @@
 
         <div id="new-comment">
             <form action="/posts/<%= post._id %>/comments" method="POST">
-                <textarea name="comment" id="newcomment-text" col="10" rows="10" style="height: 300px; width: 500px;">leave a comment</textarea>
+                <textarea name="comment" id="newcomment-text">leave a comment</textarea>
                 <input type="submit" value="Leave a Comment" id="leavecomment">
             </form>
         </div>
