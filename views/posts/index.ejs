@@ -21,13 +21,19 @@
       <div id="content">
         <%= p.content %>
       </div>
+      <div id="postname">
+        &#9749; <%= p.userName %>
+      </div>
       <div id="date">
         <%= p.createdAt.toLocaleTimeString() %>
         &ncup;
         <%= p.createdAt.toLocaleDateString() %>
       </div>
-      <div id="post-details"><a href="/posts/<%= p._id %>">View Post</a></div>
+      <div id="post-details">
+        <a href="/posts/<%= p._id %>">View Post</a>
+      </div>
       <% }); %>
+      <br>
   </section>
   <br>  
   <a href="/posts/new"><button type="button" id="addnew">Add New Post</button></a>

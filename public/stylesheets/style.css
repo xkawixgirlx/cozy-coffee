@@ -53,11 +53,7 @@ nav {
   justify-content: space-between;
   align-content: center;
   align-items: center;
-}
-
-nav {
   padding-left: 10px;
-  margin: 0 25px 0 25px; 
 }
 
 .login {
@@ -87,6 +83,18 @@ nav {
   border-radius: 55px;
 }
 
+.coffee-img img {
+  width: 90%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 45px;
+  padding-top: 10px;
+}
+
 #latest {
   display: flex;
   justify-content: center;
@@ -95,7 +103,7 @@ nav {
 
 #addnew,
 #newcomment-text,
-#deletecomment-btn {
+#deletecomment-btn, #submit-new {
   font-size: 1.1rem;
   margin: 3px 0 3px;
   color: #3D2B1F;
@@ -112,13 +120,13 @@ nav {
 }
 
 #date,
-#post-details {
-  display: grid;
+#post-details, #postname {
+  display: flex;
   justify-content: right;
-}
-#post-details {
   align-items: center;
+  padding: 5px;
 }
+
 
 #title {
   font-weight: bold;
@@ -133,7 +141,7 @@ nav {
   border: 2.5px dotted #926644;
   border-radius: 15px;
   flex-wrap: wrap;
-  padding: 6px;
+  padding: 8px;
 
 
 }
@@ -143,12 +151,12 @@ nav {
 }
 
 #postimage {
-  height: 275px;
-  width: 275px;
+  height: 375px;
+  width: 375px;
   object-fit: cover;
   overflow: hidden;
   position: center;
-
+  padding: 10px;
 }
 
 .posts {
@@ -157,6 +165,33 @@ nav {
   justify-content: center;
   align-content: center;
   align-items: center;
+}
+
+#new-post-form {
+  display: grid;
+  grid-auto-columns: max-content;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 25px;
+}
+
+#new-title, #new-image, #new-type, #new-content {
+  font-size: 1.5rem;
+  color: #3D2B1F;
+  font-family: "Figtree", sans-serif;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+
+#new-post-area {
+  border-radius: 15px;
+  border: 2.5px dotted #926644;
+  padding: 5px;
+  background-color: #EAE0C8;
+  color: #3D2B1F;
 }
 
 footer {
