@@ -10,9 +10,11 @@
   <section class="posts">
     <br>
     <% posts.slice().reverse().forEach(function(p) { %>
+      <% if (p.image) { %>
       <div id="postimg">
        <img src="<%= p.image %>" alt="" id="postimage"/> 
       </div>
+      <%  } %>
       <div id="title">
         <%= p.title %>
       </div>
