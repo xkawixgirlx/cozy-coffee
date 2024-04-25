@@ -5,7 +5,7 @@
 }
 
 body {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -23,8 +23,7 @@ a:hover {
   color: #A0785A;
 }
 
-h1,
-h2 {
+h1, h2 {
   color: #3D2B1F;
   display: grid;
   justify-content: center;
@@ -42,6 +41,12 @@ h2 {
   border: 4.5px dotted #926644;
   border-radius: 15px;
   font-family: "Figtree", sans-serif;
+  display: grid;
+}
+
+nav {
+  padding-left: 10px;
+  margin: 0 25px 0 25px; 
 }
 
 .login {
@@ -61,6 +66,7 @@ h2 {
   justify-content: right;
   align-items: center;
   color: #3D2B1F;
+  padding-right: 10px;
 }
 
 #user img {
@@ -89,7 +95,7 @@ h2 {
 }
 
 #title,
-#content {
+#content{
   display: grid;
   justify-content: center;
 }
@@ -98,6 +104,9 @@ h2 {
 #post-details {
   display: grid;
   justify-content: right;
+}
+#post-details {
+  align-items: center;
 }
 
 #title {
@@ -115,18 +124,30 @@ h2 {
   flex-wrap: wrap;
   padding: 6px;
 
+
 }
 
 #latest img {
-  height: 70px;
+  height: 75px;
+}
+
+#postimg{
+  display: inline;
+  justify-content: center;
+  align-items: center;
+
 }
 
 #postimage {
-  height: 200px;
-  width: 200px;
-  border: max-content dotted #926644;
+  height: 275px;
+  width: 275px;
+  object-fit: cover;
+  overflow: hidden;
+  position: center;
+
 }
 
-.div #headimage {
-  z-index: 1;
+section {
+  margin: 0 25px 0 25px; 
+  padding: 0 8px;
 }

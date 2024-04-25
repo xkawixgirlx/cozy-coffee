@@ -5,6 +5,7 @@
 <br>
 <% if (user?._id.equals(post.user)) { %>
 <div id="post-title"><%= post.title %></div>
+<div id="post-title"><img src="<%= post.image %>"></div>
 <div id="post-body"><%= post.content %></div>
 <div id="delete-action">
     <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">

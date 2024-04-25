@@ -9,8 +9,8 @@
   <section class="posts">
     <br>
     <% posts.slice().reverse().forEach(function(p) { %>
-      <div id="postimage">
-        <%= p.image %>
+      <div id="postimg">
+       <img src="<%= p.image %>" alt="" id="postimage"/> 
       </div>
       <div id="title">
         <%= p.title %>
@@ -20,6 +20,8 @@
       </div>
       <div id="date">
         <%= p.createdAt.toLocaleTimeString() %>
+        &ncup;
+        <%= p.createdAt.toLocaleDateString() %>
       </div>
       <div id="post-details"><a href="/posts/<%= p._id %>">View Post</a></div>
       <% }); %>

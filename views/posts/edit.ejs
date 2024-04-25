@@ -7,6 +7,8 @@
     <form action="/posts/<%= post._id %>?_method=PUT" method="POST">
         <label>Title:</label>
         <input type="text" name="title" value="<%= post.title %>">
+        <label>Image:</label> 
+        <input type="text" name="image" id="editimage" value="<%= post.image %>">
         <label>Coffee or Tea</label>
         <select name="coffeeType" value="<%= post.coffeeType %>">
             <option value="Light Roast" <%=post.coffeeType=='Light Roast' ? 'selected' : '' %>>Light Roast</option>
