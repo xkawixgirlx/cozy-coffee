@@ -31,13 +31,18 @@
 <br>
 <section id="comments">
     <% post.comments.slice().reverse().forEach(function(c)  { %>
-        <p><%= c.userName %></p>
-        <p><%= c.comment %></p> 
+        <div id="comment-user">
+        <%= c.userName %> &#9749;
+        </div>
+        <div id="comment-content">
+        <%= c.comment %>
+        </div> 
         <div id="comment-date">
         <%= c.createdAt.toLocaleTimeString() %>
         &ncup; 
         <%= c.createdAt.toLocaleDateString() %> 
         </div>
+        <br> <br>
         
 <% if (user?._id.equals(c.user)) { %>
         <div id="edit-comment">

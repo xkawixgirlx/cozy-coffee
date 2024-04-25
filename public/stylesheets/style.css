@@ -36,12 +36,13 @@ h1, h2 {
   align-items: center;
   padding: 15px 0 15px 0;
   font-family: "Figtree", sans-serif;
+  width: 70vmin;
 
 }
 
 
 nav {
-  width: 85vmin;
+  width: 90vmin;
   /* min-width: 400px; */
   height: 4.5rem;
   background-color: #EAE0C8;
@@ -139,8 +140,8 @@ nav {
   margin-top: 15px;
 }
 
-#content, #post-body {
-  width: 90%;
+#content, #post-body, #comment-content {
+  width: 90vmin;
   height: fit-content 65%;
   font-size: 1.2rem;
   background-color: #EAE0C8;
@@ -163,6 +164,7 @@ nav {
   overflow: hidden;
   position: center;
   padding: 10px;
+  margin-top: 8px;
 }
 
 .posts {
