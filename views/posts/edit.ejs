@@ -5,22 +5,29 @@
     </div>
 
     <form action="/posts/<%= post._id %>?_method=PUT" method="POST">
+        <div id="editpost-title">
         <label>Title:</label>
         <input type="text" name="title" value="<%= post.title %>">
+        </div>
+        <div id="editimage-title">
         <label>Image:</label> 
-        <input type="text" name="image" id="editimage" value="<%= post.image %>">
-        <label>Coffee or Tea</label>
+        <input type="url" name="image" id="editimage" value="<%= post.image %>">
+        </div>
+        <div id="editcoffee-type">
+        <label>Coffee or Tea:</label>
         <select name="coffeeType" value="<%= post.coffeeType %>">
-            <option value="Light Roast" <%=post.coffeeType=='Light Roast' ? 'selected' : '' %>>Light Roast</option>
-            <option value="Medium Roast" <%=post.coffeeType=='Medium Roast' ? 'selected' : '' %>>Medium Roast</option>
-            <option value="Dark Roast" <%=post.coffeeType=='Dark Roast' ? 'selected' : '' %>>Dark Roast</option>
-            <option value="Matcha" <%=post.coffeeType=='Matcha' ? 'selected' : '' %>>Matcha</option>
-            <option value="Chai" <%=post.coffeeType=='Chai' ? 'selected' : '' %>>Chai</option>
-            <option value="Tea" <%=post.coffeeType=='Tea' ? 'selected' : '' %>>Tea</option>
+            <option value="Light Roast" <%=post.coffeeType=='Light Roast' ? 'selected' : '' %>>&#9749; Light Roast</option>
+            <option value="Medium Roast" <%=post.coffeeType=='Medium Roast' ? 'selected' : '' %>>&#9749; Medium Roast</option>
+            <option value="Dark Roast" <%=post.coffeeType=='Dark Roast' ? 'selected' : '' %>>&#9749; Dark Roast</option>
+            <option value="Matcha" <%=post.coffeeType=='Matcha' ? 'selected' : '' %>>&#127861; Matcha</option>
+            <option value="Chai" <%=post.coffeeType=='Chai' ? 'selected' : '' %>>&#129750; Chai</option>
+            <option value="Tea" <%=post.coffeeType=='Tea' ? 'selected' : '' %>>&#129750; Tea</option>
         </select>
-        <label>Content:</label>
-        <textarea name="content" value=" <%= post.content %> col="10" rows="10" style="height: 400px; width: 800px;"><%= post.content %></textarea>
-        <button type="submit">Edit Post</button>
+        </div>
+        <div>
+        <textarea name="content" id="editpost-content" value="<%= post.content %>"> <%= post.content %> </textarea>
+        </div>
+        <button type="submit" id="editpost-btn">Edit Post</button>
     </form>
 
 

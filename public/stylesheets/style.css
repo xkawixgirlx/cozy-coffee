@@ -85,14 +85,14 @@ nav {
 }
 
 .coffee-img img {
-  width: 90%;
+  width: 90vmin;
   height: 100%;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
-  padding-left: 45px;
+  padding-left: 10px;
   padding-top: 10px;
 
 }
@@ -106,7 +106,7 @@ nav {
 
 #addnew,
 #delete-btn,
-#deletecomment-btn, #submit-new, #leavecomment, #editcomment-btn {
+#deletecomment-btn, #submit-new, #leavecomment, #editcomment-btn, #editpost-btn {
   font-size: 1.1rem;
   margin: 5px;
   padding: 8px;
@@ -186,7 +186,7 @@ nav {
   border-radius: 25px;
 }
 
-#new-title, #new-image, #new-type, #new-content {
+#new-title, #new-image, #new-type, #new-content, #editpost-title, #editimage-title, #editcoffee-type {
   font-size: 1.5rem;
   color: #3D2B1F;
   font-family: "Figtree", sans-serif;
@@ -195,7 +195,7 @@ nav {
 }
 
 
-#new-post-area, input, #newcomment-text, #editcomment-text {
+#new-post-area, input, #newcomment-text, #editcomment-text, #editpost-content {
   border-radius: 15px;
   border: 2px dotted #926644;
   margin-top: 8px;
@@ -209,7 +209,7 @@ nav {
   width: 80vmin;
   height: 35vmin;
 }
-#newcomment-text, #editcomment-text {
+#newcomment-text, #editcomment-text, #editpost-content {
   display: flex;
   flex-direction: column;
   width: 80vmin;
