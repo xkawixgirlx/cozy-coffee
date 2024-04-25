@@ -53,7 +53,6 @@ async function create(req, res) {
     post.comments.push(req.body);
     try {
         await post.save();
-        return ('Your Comment Posted Successfully!');
     } catch (err) {
         console.log(err.message);
     }

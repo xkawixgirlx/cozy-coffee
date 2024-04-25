@@ -23,6 +23,7 @@ body {
 a {
   color: #3D2B1F;
   font-size: 1.25rem;
+  padding: 8px;
 }
 
 a:hover {
@@ -107,7 +108,7 @@ nav {
 #delete-btn,
 #deletecomment-btn, #submit-new, #leavecomment {
   font-size: 1.1rem;
-  margin: 3px 0 3px;
+  margin: 5px;
   padding: 8px;
   color: #3D2B1F;
   background-color: #EAE0C8;
@@ -142,6 +143,7 @@ nav {
 #content, #post-body {
   width: 90%;
   height: fit-content 65%;
+  font-size: 1.2rem;
   background-color: #EAE0C8;
   border: 2.5px dotted #926644;
   border-radius: 15px;
@@ -194,9 +196,12 @@ nav {
 #new-post-area, input, #newcomment-text {
   border-radius: 15px;
   border: 2px dotted #926644;
+  margin-top: 8px;
   padding: 5px;
   background-color: #EAE0C8;
   color: #3D2B1F;
+  font-family: "Figtree", sans-serif;
+  font-size: 1.3rem;
 }
 
 #post-image {
@@ -209,14 +214,27 @@ nav {
 }
 #post-coffeetype {
   padding: 8px;
-  justify-content: right;
+  font-family: "Figtree", sans-serif;
+  font-weight: bold;
 } 
+
 #postdetails {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
+}
+
+#new-comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#comments {
+  font-family: "Figtree", sans-serif;
+  font-size: 18px;
 }
 
 footer {
