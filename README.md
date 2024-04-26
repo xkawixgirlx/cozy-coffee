@@ -1,10 +1,15 @@
-# Cozy Coffee
+# Cozy-Coffee!
 This is a project I made to be like a social media site where users can put coffee, or tea photos and leave comments and posts. This came about because I love coffee, and thought it would be cool to be able to add photos, comment and post about it.
 
-# Screenshot
+# Screenshots
 
-<img src="url to your image on imgur">
-<img src="url to your image on imgur">
+<img src="/images/submit_post.jpg">
+<img src="/images/feed.jpg">
+<img src="/images/post_comment.jpg">
+<img src="/images/Desktop_Feed.png">
+<img src="/images/desktop_homepage.png">
+<img src="/images/Desktop_post.png">
+
 
 # Technologies Used
 
