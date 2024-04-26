@@ -29,7 +29,8 @@ a:hover {
   color: #A0785A;
 }
 
-h1, h2 {
+h1,
+h2 {
   color: #3D2B1F;
   display: grid;
   justify-content: center;
@@ -107,7 +108,11 @@ nav {
 
 #addnew,
 #delete-btn,
-#deletecomment-btn, #submit-new, #leavecomment, #editcomment-btn, #editpost-btn {
+#deletecomment-btn,
+#submit-new,
+#leavecomment,
+#editcomment-btn,
+#editpost-btn {
   font-size: 1.1rem;
   margin: 8px;
   padding: 8px;
@@ -119,13 +124,14 @@ nav {
 }
 
 #title,
-#content{
+#content {
   display: grid;
   justify-content: center;
 }
 
 #date,
-#post-details, #postname {
+#post-details,
+#postname {
   display: flex;
   justify-content: right;
   align-items: center;
@@ -133,14 +139,17 @@ nav {
 }
 
 
-#title, #post-title {
+#title,
+#post-title {
   font-weight: bold;
   color: #3D2B1F;
   font-size: 1.2rem;
   padding: 5px 0 5px;
 }
 
-#content, #post-body, #comment-content {
+#content,
+#post-body,
+#comment-content {
   width: 90vmin;
   height: fit-content 65%;
   font-size: 1.2rem;
@@ -186,7 +195,13 @@ nav {
   border-radius: 25px;
 }
 
-#new-title, #new-image, #new-type, #new-content, #editpost-title, #editimage-title, #editcoffee-type {
+#new-title,
+#new-image,
+#new-type,
+#new-content,
+#editpost-title,
+#editimage-title,
+#editcoffee-type {
   font-size: 1.5rem;
   color: #3D2B1F;
   font-family: "Figtree", sans-serif;
@@ -195,7 +210,11 @@ nav {
 }
 
 
-#new-post-area, input, #newcomment-text, #editcomment-text, #editpost-content {
+#new-post-area,
+input,
+#newcomment-text,
+#editcomment-text,
+#editpost-content {
   border-radius: 15px;
   border: 2px dotted #926644;
   margin-top: 8px;
@@ -205,17 +224,21 @@ nav {
   font-family: "Figtree", sans-serif;
   font-size: 1.3rem;
 }
+
 #new-post-area {
   width: 80vmin;
   height: 35vmin;
 }
-#newcomment-text, #editcomment-text, #editpost-content {
+
+#newcomment-text,
+#editcomment-text,
+#editpost-content {
   display: flex;
   flex-direction: column;
   width: 80vmin;
   height: 35vmin;
-  padding: 8px; 
-  margin-top: 15px; 
+  padding: 8px;
+  margin-top: 15px;
 }
 
 #post-image {
@@ -226,11 +249,12 @@ nav {
   position: center;
   padding: 10px;
 }
+
 #post-coffeetype {
   padding: 8px;
   font-family: "Figtree", sans-serif;
   font-weight: bold;
-} 
+}
 
 #postdetails {
   display: flex;
@@ -251,6 +275,7 @@ nav {
   font-family: "Figtree", sans-serif;
   font-size: 18px;
 }
+
 #edittitle {
   font-family: "Figtree", sans-serif;
   font-size: 18px;

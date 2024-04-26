@@ -14,7 +14,7 @@ module.exports = {
 
 async function update(req, res) {
     try {
-        const updatedPost = await Post.findOneAndUpdate({_id: req.params.id, user: req.user._id}, req.body, {new: true});
+        const updatedPost = await Post.findOneAndUpdate({ _id: req.params.id, user: req.user._id }, req.body, { new: true });
         return res.redirect(`/posts/${updatedPost._id}`);
     } catch (err) {
         console.log(err.message);
@@ -25,7 +25,7 @@ async function update(req, res) {
 
 
 async function edit(req, res) {
-    const post = await Post.findOne({_id: req.params.id, user: req.user._id});
+    const post = await Post.findOne({ _id: req.params.id, user: req.user._id });
     if (!post) return res.redirect('/posts');
     res.render('posts/edit', { post });
 };

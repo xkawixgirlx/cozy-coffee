@@ -23,6 +23,8 @@ This is a project I made to be like a social media site where users can put coff
 - Favicon Generator
 - Google Oauth
 - Heroku
+- Mongoose
+- MongoDB
 
 
 # Getting Started
