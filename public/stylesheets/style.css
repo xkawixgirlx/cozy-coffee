@@ -97,6 +97,7 @@ nav {
 
 }
 
+
 #latest {
   display: flex;
   justify-content: center;
@@ -108,7 +109,7 @@ nav {
 #delete-btn,
 #deletecomment-btn, #submit-new, #leavecomment, #editcomment-btn, #editpost-btn {
   font-size: 1.1rem;
-  margin: 5px;
+  margin: 8px;
   padding: 8px;
   color: #3D2B1F;
   background-color: #EAE0C8;
