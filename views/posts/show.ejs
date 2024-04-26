@@ -23,6 +23,7 @@
         <button type="submit" id="delete-btn">Delete Post</button>
         </form>
     </div>
+    <br>
     <div id="edit-link">
         <a href="/posts/<%= post._id %>/edit">Edit My Post</a>
     </div>
@@ -32,7 +33,7 @@
 <section id="comments">
     <% post.comments.slice().reverse().forEach(function(c)  { %>
         <div id="comment-user">
-        <%= c.userName %> &#9749;
+        <%= c.userName %> &#9749; wrote:
         </div>
         <div id="comment-content">
         <%= c.comment %>
@@ -42,16 +43,18 @@
         &ncup; 
         <%= c.createdAt.toLocaleDateString() %> 
         </div>
-        <br> <br>
+        <br> 
         
 <% if (user?._id.equals(c.user)) { %>
         <div id="edit-comment">
             <a href="/comments/<%= c._id %>/edit">Edit Comment</a>
         </div>
+        <br>
         <div id="delete-comment">
             <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
                 <button type="submit" id="deletecomment-btn">Delete Comment</button>
               </form>
+            <br>
         </div>
             <% } %>
         <% }); %>
