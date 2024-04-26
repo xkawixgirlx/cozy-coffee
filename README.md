@@ -3,12 +3,12 @@ This is a project I made to be like a social media site where users can put coff
 
 # Screenshots
 
-<img src="/images/submit_post.jpg">
-<img src="/images/feed.jpg">
-<img src="/images/post_comment.jpg">
-<img src="/images/Desktop_Feed.png">
-<img src="/images/desktop_homepage.png">
-<img src="/images/Desktop_post.png">
+<img src="public/images/submit_post.jpg">
+<img src="public/images/feed.jpg">
+<img src="public/images/post_comment.jpg">
+<img src="public/images/Desktop_Feed.png">
+<img src="public/images/desktop_homepage.png">
+<img src="public/images/Desktop_post.png">
 
 
 # Technologies Used
